@@ -1,61 +1,52 @@
 # Thim
 
-# What is Thim?
-
 Thim is a template for developing UI designs. This template uses Gulp to automate the build tasks. In this repository, there is a pre-configured and easy to customize `gulpfile.js`.
 
-# Index
-- [What is Thim?](#what-is-thim)
-- [How it works?](#how-it-works)
-- [Getting Started](#getting-started)
+# Table of content
+- [What is Thim?](#thim)
+- [Getting started](#getting-started)
+    - [Install](#install)
     - [Usage](#usage)
-    - [Folder Structure](#folder-structure)
+    - [Folder structure](#folder-structure)
     - [Tasks](#tasks)
     - [Config](#config)
+    - [User defined](#user-defined)
+        - [Add environment mode](#add-environment-mode)
+        - [Add task](#add-task)
+        - [Add private task](#add-private-task)
 - [Licence](#licence)
 
-# How it works?
-
-...
-
+Prerequisites
 # Getting Started
 
-## Usage
-
-Download and setup this repo:
+## Install
 
 - Clone this repository
 
-    via **SSH**:
     ```
     git clone git@github.com:fhddev/thim.git
     ```
-    or **HTTPS**:
-    ```
-    git clone https://github.com/fhddev/thim.git
-    ```
-    or **Github CLI**:
-    ```
-    gh repo clone fhddev/thim
-    ```
 
-* Navigate to the folder
+- Navigate to the root folder
     ```
     cd thim
     ```
 
-* Install dependencies:
+- Install dependencies
     ```
     npm i
     ```
 
-* Run the development server:
+## Usage
+
+- For development, run the development server :
     ```
     npm run dev
     ```
-    or
+
+- For production, run the build command :
     ```
-    gulp
+    npm run build
     ```
 
 ## Folder Structure
@@ -89,195 +80,50 @@ thim/
 
 ## Tasks
 
-`gulpfile.js` has the following gulp tasks:
+The table below shows the available gulp tasks.
 
-- `default`
-
-  This is the default task. It will run the development server and build the source code with hot re-loading support.
-  
-  **To run this task:**
-
-  using gulp:
-  ```
-  gulp
-  ```
-
-  using npm:
-  ```
-  npm run dev
-  ```
-
-- `releaseBuild`
-
-  This task will build the source code to make it ready to use in production.
-
-  **To run this task:**
-
-  using gulp:
-  ```
-  gulp releaseBuild
-  ```
-
-  using npm:
-  ```
-  npm run build
-  ```
+|Task|Usage|Description
+|:---|:---|:---|
+|`default`| `gulp` or `npm run dev` | This is the default task. It will run the development server and build the source code with hot re-loading support.
+|`releaseBuild`| `gulp releaseBuild` or `npm run build` | This task will build the source code to make it ready to use in production.
 
 ## Config
 
-You can config the build tasks from `gulpfile.js` file.
-
-- `devModes` object
-
-  In this object you can define the different modes for your project. Default are *dev* and *prod*.
-
-  **Properies :**
-
-  - `destDir`
-  
-    Specify the destination folder where the build output files will be stored. **Defualt** is `theme`.
-
-  - `options`
-
-    Config options for the modules and tasks used in the build process.
-
-    **Properties :**
-
-    - `browserSync`
-
-      Config options for browserSync module.
-
-      **Properties :**
-
-      - `enable`
-
-        True to use and run browserSync or false to skip this module in the build process.
-
-    - `uglify`
-
-      Config options for uglify module.
-
-      **Properties :**
-
-      - `enable`
-
-        True to use and run uglify or false to skip this module in the build process.
-    
-    - `cleanCSS`
-
-      Config options for cleanCSS module.
-
-      **Properties :**
-
-      - `enable`
-
-        True to use and run cleanCSS or false to skip this module in the build process.
-    
-    - `gulpWatch`
-
-      Config options gulp.watch function.
-
-      **Properties :**
-
-      - `html`
-      
-        **Properties**
-
-        - `enable`
-
-          true to watch html files or false otherwise.
-
-      - `styles`
-      
-        **Properties**
-
-        - `enable`
-
-          true to watch scss files or false otherwise.
-
-      - `scripts`
-      
-        **Properties**
-
-        - `enable`
-
-          true to watch js files or false otherwise.
-
-      - `html`
-      
-        **Properties**
-
-        - `enable`
-
-          true to watch html files or false otherwise.
-
-      - `images`
-      
-        **Properties**
-
-        - `enable`
-
-          true to watch images or false otherwise.
-
-      - `fonts`
-      
-        **Properties**
-
-        - `enable`
-
-          true to watch fonts files or false otherwise.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-- `conf` object
-
-  Global and common config for all tasks and env modes.
-
-  **Properies :**
-
-  - `env`
-  
-    The current env mode (*it should be read-only, to modify the prop use setupDevMode and setupProdMode functions*).
-
-  - `paths`
-
-    Project paths.
-
-    **Properties :**
-
-    - `root`
-
-      The root path (*usually it is the directory where `gulpfile.js` is located*).
-
-    - `srcDir`
-
-      `src` folder path.
-
-    - `globs`
-
-      Globs used with `gulp.src` and `gulp.watch` functions.
-
-    - `options`
-
-      User-defined config for global modules used in the build task.
-
-# Custom
-
-## Custom environment mode
+You can config the build tasks from `gulpfile.js` file. The table below shows the available config options.
+
+|Name|Type|Default|Required|Description
+|:---|:---:|:---:|:---:|:---|
+|`devModes`|object||YES|Env modes
+|`devModes.destDir`|string|theme|YES|Env modes
+|`devModes.options`|object||YES|Config options for the modules and tasks used in the build process
+|`devModes.option.browserSync`|object||YES|Config options for browserSync module
+|`devModes.option.browserSync.enable`|boolean|true|YES|True to use the module or no otherwise
+|`devModes.option.uglify`|object||YES|Config options for uglify module
+|`devModes.option.uglify.enable`|boolean||YES|True to use the module or no otherwise
+|`devModes.option.cleanCSS`|object||YES|Config options for cleanCSS module
+|`devModes.option.cleanCSS.enable`|boolean||YES|True to use the module or no otherwise
+|`devModes.option.gulpWatch`|object||YES|Config options for gulp.watch function
+|`devModes.option.gulpWatch.html`|object||YES|Options for html files
+|`devModes.option.gulpWatch.html.enable`|boolean||YES|True to watch the files or no otherwise
+|`devModes.option.gulpWatch.styles`|object||YES|Options for style files
+|`devModes.option.gulpWatch.styles.enable`|boolean||YES|True to watch the files or no otherwise
+|`devModes.option.gulpWatch.scripts`|object||YES|Options for js files
+|`devModes.option.gulpWatch.scripts.enable`|boolean||YES|True to watch the files or no otherwise
+|`devModes.option.gulpWatch.images`|object||YES|Options for images
+|`devModes.option.gulpWatch.images.enable`|boolean||YES|True to watch the files or no otherwise
+|`devModes.option.gulpWatch.fonts`|object||YES|Options for fonts
+|`devModes.option.gulpWatch.fonts.enable`|boolean||YES|True to watch the files or no otherwise
+|`conf`|object||YES|Global config options for all tasks and env modes
+|`conf.env`|object|`envMode.dev`|YES|The current env mode (*use setupDevMode or setupProdMode to modify the prop, don't modify it directly*).
+|`conf.paths`|object||YES|Project paths
+|`conf.paths.root`|string||YES|Root path (*usually it is the directory where `gulpfile.js` is located*)
+|`conf.paths.srcDir`|string||YES|*src* folder path
+|`conf.globs`|object||YES|Globs to be used with `gulp.src` and `gulp.watch` functions
+|`conf.options`|object||YES|User-defined config for global modules used in the build task
+
+# User defined
+
+## Add environment mode
 
 To add new environment mode :
 
@@ -327,7 +173,7 @@ To add new environment mode :
   }
   ```
 
-## Add new task
+## Add task
 
 To add new task :
 
@@ -362,7 +208,7 @@ To add new task :
     },
   ```
 
-## Add new private task
+## Add private task
 
 To add new private task (sub-task) :
 
@@ -394,3 +240,7 @@ To add new private task (sub-task) :
           .pipe(gulp.dest(pdfsDir));
   }
   ```
+
+# Licence
+
+ISC
