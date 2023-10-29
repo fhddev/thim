@@ -203,7 +203,6 @@ To add new task :
 
   ```json
   "scripts": {
-      ...
       "cleanDestFolders": "gulp cleanDestFolders"
     },
   ```
