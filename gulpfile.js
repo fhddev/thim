@@ -329,32 +329,32 @@ function transpileLibs()
 
 function watch(cb)
 {
-  if( conf.env?.watchers?.html?.enable )
+  if( conf.env.options?.gulpWatch?.html?.enable )
   {
     gulp.watch(conf.globs.html, gulp.series(transpileHTML));
   }
 
-  if( conf.env?.watchers?.styles?.enable )
+  if( conf.env.options?.gulpWatch?.styles?.enable )
   {
     gulp.watch(conf.globs.scss, gulp.series(transpileStyles));
   }
 
-  if( conf.env?.watchers?.scripts?.enable )
+  if( conf.env.options?.gulpWatch?.scripts?.enable )
   {
     gulp.watch(conf.globs.js, gulp.series(transpileScripts));
   }
 
-  if( conf.env?.watchers?.images?.enable )
+  if( conf.env.options?.gulpWatch?.images?.enable )
   {
     gulp.watch(conf.globs.images, gulp.series(transpileImages));
   }
 
-  if( conf.env?.watchers?.fonts?.enable )
+  if( conf.env.options?.gulpWatch?.fonts?.enable )
   {
     gulp.watch(conf.globs.fonts, gulp.series(transpileFonts));
   }
 
-  if( conf.env?.watchers?.libs?.enable )
+  if( conf.env.options?.gulpWatch?.libs?.enable )
   {
     gulp.watch(conf.globs.libs, gulp.series(transpileLibs));
   }

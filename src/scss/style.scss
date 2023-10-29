@@ -1,3 +1,26 @@
+@import "_variables";
+
+@font-face {
+    font-family: $font-space-grotesk;
+    src: url("./../fonts/SpaceGrotesk-VariableFont_wght.ttf");
+}
+
 body {
-    background-color: red;
+    background-color: #0fa0ad;
+    color: white;
+}
+
+h1 {
+    font-family: $font-space-grotesk;
+}
+
+.logo-wrapper {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 5%;
+}
+
+img {
+    width: 5rem;
+    height: 10rem;
 }
