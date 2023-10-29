@@ -141,7 +141,11 @@ function transpileHTML()
   .pipe(
     gulpFileInclude(
       {
-        allowEmpty: true
+        prefix: '@@',
+        basepath: `${conf.paths.root}/${conf.paths.srcDir}/partials/`,
+        context: {
+          title: ''
+        }
       }
     )
   )
