@@ -14,6 +14,7 @@ Thim is a template for developing UI designs. This template uses Gulp to automat
         - [Add environment mode](#add-environment-mode)
         - [Add task](#add-task)
         - [Add private task](#add-private-task)
+- [TODO](#todo)
 - [Licence](#licence)
 
 Prerequisites
@@ -239,6 +240,11 @@ To add new private task (sub-task) :
           .pipe(gulp.dest(pdfsDir));
   }
   ```
+
+# TODO
+
+- [x] TEST1
+- [ ] Add (conf.globs.html = [conf.paths.srcDir + '/**/*.html'];) in gulpfile.js so it can watch any html file.
 
 # Licence
 
