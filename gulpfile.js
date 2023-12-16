@@ -65,7 +65,7 @@ let conf = {
 };
 
 // init globs
-conf.globs.html = [conf.paths.srcDir + '/*.html'];
+conf.globs.html = [conf.paths.srcDir + '/**/*.html'];
 conf.globs.scss = [conf.paths.srcDir + '/scss/**/*.scss', '!' + conf.paths.srcDir + '/scss/**/_*.scss'];
 conf.globs.scssExclude = ['!' + conf.paths.srcDir + '/scss/**/_*.scss'];
 conf.globs.js = [conf.paths.srcDir + '/js/**/*.js'];

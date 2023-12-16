@@ -1,0 +1,47 @@
+@@include('layout/header.html', {
+  title: 'Fahad'
+})
+
+
+
+      @@include('page-hero.html', { pageTitle: 'Contact' })
+    
+      <!-- Posts Section -->
+      <div class="album py-5 f-contact">
+
+        
+        <div class="container">
+
+          <div class="row d-flex justify-content-center f-head">
+            
+            <div class="col-6">
+              <form>
+                <h2 class="text-center mt-5 mb-3">Contact Me</h2>
+
+                <div class="mb-3">
+                  <label for="name" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="name">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="email">
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Message</label>
+                  <textarea class="form-control" id="message" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-send">Send</button>
+              </form>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        </div>
+
+      </div>
+
+
+@@include('layout/footer.html')

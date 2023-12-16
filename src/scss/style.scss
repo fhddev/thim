@@ -5,22 +5,1159 @@
     src: url("./../fonts/SpaceGrotesk-VariableFont_wght.ttf");
 }
 
-body {
-    background-color: #0fa0ad;
+:root {
+    --color-1: #0fa0ad;
+    --color-2: #fff;
+    --color-3: #E4B196;
+    --color-4: 15, 160, 173;
+    --color-5: #F8F8F8;
+    --color-6: 255,255,255;
+    --color-7: #202124;
+    --color-8: #fafafa;
+    --color-9: #0a7680;
+    --color-10: #afd8db;
+
+    --color-11: #667085;
+    --color-12: #E4E7EC;
+    --color-13: #f7fafa;/* #fafcfc #f7fafa #edf4f5;*//*#fcfcfd;*/
+    --color-14: #e4f0f0;/* #d1e6e6  */
+
+    --color-15: 247, 245, 245; /* section background */
+
+    --font-1: 'Poppins';
+    --font-2: 'Inter';
+    --font-3: 'IBM Plex Seri';
+
+    --font-4: 'Roboto';
+    --font-5: 'Space Grotesk', sans-serifs;
+
+    
+
+    --size-navbar-height: 5rem;
+}
+
+/**
+=====================================================================================
+
+Common
+
+=====================================================================================
+*/
+
+.f-section-title {
+
+}
+
+::-moz-selection { /* Code for Firefox */
     color: white;
+    background: var(--color-1);
 }
 
-h1 {
-    font-family: $font-space-grotesk;
+::selection {
+    color: white;
+    background: var(--color-1);
 }
 
-.logo-wrapper {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 5%;
+html,
+body {
+    color: var(--color-7);
+    font-family: var(--font-2);
 }
 
-img {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-5) !important;
+    /* overflow-wrap: break-word; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    overflow-wrap: break-word;
+}
+
+.f-color-primary {
+    color: var(--color-1) !important;
+}
+
+.f-see-more {
+    color: var(--color-1) !important;
+    text-decoration: none !important;
+}
+
+.f-see-more:hover {
+    opacity: .6;
+}
+
+.f-btn-secondary-dark {
+    background-color: var(--color-9)!important;
+    border-color: var(--color-9)!important;
+    color: white !important;
+}
+
+.f-btn-primary {
+    background-color: var(--color-1)!important;
+    border-color: var(--color-1)!important;
+    color: white !important;
+}
+
+.featurette-divider {
+    margin: 4rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/**
+=====================================================================================
+
+Announcement
+
+=====================================================================================
+*/
+
+.f-announcement {
+    background-color: var(--color-9) !important;
+}
+
+.f-announcement p {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+/**
+=====================================================================================
+
+Navbar
+
+=====================================================================================
+*/
+
+.f-navbar {
+    background-color: white  !important;
+    color: var(--color-5) !important;
+    height: var(--size-navbar-height);
+    /* font-size: 1.1rem; */
+    padding: .75rem 0;
+    border-bottom: 1px solid var(--color-12) !important;
+    border-top: 1px solid var(--color-12) !important;
+}
+
+.f-navbar ul {
+    gap: 1.5rem;
+}
+
+.f-navbar .nav-item .nav-link {
+    color: var(--color-11) !important;
+    /* opacity: 0; */
+}
+
+.f-navbar .nav-item .nav-link:hover {
+    color: var(--color-1) !important;
+}
+
+.f-navbar .nav-item .active {
+    color: var(--color-1) !important;
+    font-weight: bold;
+}
+
+.f-logo {
+    
+    display: inline-block;
     width: 5rem;
+    height: 5rem;
+    margin-right: .3rem;
+}
+
+.navbar-brand {
+    color: #000;
+    font-family: var(--font-4) !important;
+    font-size: 1.50rem;
+    white-space: nowrap;
+}
+
+.f-social-media-icon {
+    fill: rgba(0, 0, 0, 0.55) !important;
+    width: 3rem;
+    height: 3rem;
+}
+
+.f-social-media-icon:hover {
+    fill: #000 !important;
+}
+
+.f-search-icon {
+    width: 1.6rem;
+    height: 1.6rem;
+}
+
+/**
+=====================================================================================
+
+Hero
+
+=====================================================================================
+*/
+
+.f-hero {
+    background-color: rgba(247,245,245,.5) !important;
+    border-bottom: 1px solid var(--color-12) !important;
+    /* height: 85vh; */
+    height: 100vh;
+}
+
+.f-right {}
+
+.f-hero .f-title {
+    font-size: 8rem;
+    /* background-color: blue; */
+}
+
+.f-hero .f-desc-text {
+    margin:0;
+    font-size: 1.5rem;
+    text-align: left;
+    max-width: 768px;
+}
+
+.f-hero-image {
+    /* background-color: red; */
+}
+
+.f-hand-write-image{
+    height: 6rem;
+    margin-left: 5rem;
+
+}
+
+.f-hero .btn {
+    /* font-weight: bold; */
+    /* padding: .5rem 1rem; */
+    padding: .5rem 1.5rem;
+    letter-spacing: .04rem;
+    font-size: 1.3rem;
+}
+
+.f-circle {
+    /* background-color: white !important; */
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0, 0, 0, 0.55);
+}
+
+.f-hero-content-container{
+    /* background-color: green; */
+}
+
+.f-hero-content {
+    /* position: relative; */
+    /* background-color: blue; */
+    /* position: relative; */
+    width: 100%;
+    height: 100%;
+}
+
+/* .f-border-right {
+    position: absolute;
+    bottom: 0;
+    top: 10rem;
+    right: 0;
+    border-right: 5px solid var(--color-1);
+} */
+
+/* .f-border-bottom {
+    position: absolute;
+    bottom: 0;
+    top: 2rem;
+    right: 5rem;
+    background-color: var(--color-1);
+    width: 10rem;
     height: 10rem;
+    border-right: 5px solid var(--color-1);
+    animation: MoveUpDown 2s linear infinite;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+.f-border-bottom2 {
+    position: absolute;
+    bottom: 0;
+    top: 1.5rem;
+    right: 5.5rem;
+    background-color: var(--color-1);
+    opacity: .5;
+    width: 10rem;
+    height: 10rem;
+    border-right: 5px solid var(--color-1);
+    animation: MoveUpDown 2s linear infinite;
+}
+
+.f-border-bottom3 {
+    position: absolute;
+    bottom: 0;
+    top: 14rem;
+    right: 5rem;
+    background-color: var(--color-1);
+    width: 10rem;
+    height: 10rem;
+    border-right: 5px solid var(--color-1);
+} */
+.f-border-bottom2 {
+    position: absolute;
+    /* bottom: 0; */
+    top: .5rem;
+    right: 15rem;
+    background-color: var(--color-1);
+    opacity: .5;
+    width: 10rem;
+    height: 10rem;
+    border-right: 5px solid var(--color-1);
+    animation: MoveUpDown 2s linear infinite;
+}
+.f-border-bottom3 {
+    position: absolute;
+    bottom: 0;
+    top: 14rem;
+    right: 5rem;
+    background-color: var(--color-1);
+    width: 10rem;
+    height: 10rem;
+    border-right: 5px solid var(--color-1);
+}
+.f-border-bottom4 {
+    position: absolute;
+    bottom: 0;
+    /* top: 14.5rem; */
+    right: 4.5rem;
+    background-color: var(--color-1);
+    opacity: .5;
+    width: 10rem;
+    height: 10rem;
+    border-right: 5px solid var(--color-1);
+}
+
+
+/* .f-border-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 10rem;
+    border-bottom: 5px solid var(--color-1);
+} */
+
+.f-circle:nth-last-child(1) {
+    margin-bottom: 0px;
+}
+
+.f-btn-primary:hover {
+    background-color: white !important;
+    color: var(--color-1) !important;
+}
+
+.f-btn-secondary {
+    /* background-color: rgba(15, 160, 173, 0.05) !important; */
+    color: var(--color-1) !important;
+    border: 1px solid var(--color-1) !important;
+}
+
+.f-btn-secondary:hover {
+    /* background-color: rgba(15, 160, 173, 0.05) !important; */
+    color: white !important;
+    background-color: var(--color-1) !important;
+}
+
+/**
+=====================================================================================
+
+Portfolio
+
+=====================================================================================
+*/
+
+.f-portfolio {
+    background-color: rgba(247,245,245,.5) !important;
+    border-bottom: 1px solid var(--color-12) !important;
+}
+
+.f-portfolio .card {
+    color: var(--color-7) !important;
+    position: relative;
+}
+
+.f-portfolio .card .card-title-container {
+    position: absolute;
+    background-color: white;
+    border-radius: .5rem;
+    width: 80%;
+    left: 1rem;
+    bottom: 1rem;
+    margin:0;
+    padding: 0 .5rem .5rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-7);
+    border-radius: .5rem;
+}
+
+.f-portfolio .card .card-title {
+    font-size: 1rem;
+    margin:0;
+    padding:0;
+}
+
+.f-portfolio .card:hover {
+    color: var(--color-1) !important;
+}
+
+/* #d9d9d9 */
+.f-portfolio .f-card {
+    background-color: #fbfafa;
+    height: 60vh;
+    border-radius: .5rem;
+    position: relative;
+}
+
+.f-portfolio .f-card .f-card-image {
+    height: 60%;
+}
+
+.f-portfolio .f-card .f-card-bottom {
+    position: absolute;
+    bottom: 0;
+    margin-left: 1rem;
+    color: #d9d9d9;
+}
+
+.f-portfolio .f-card .f-card-bottom p {
+    border-color: #d9d9d9;
+}
+
+.f-portfolio .f-card .f-card-flying-div {
+    position: absolute;
+    height: 40%;
+    width: 90%;
+    left: 5%;
+    top: 50%;
+    border-radius: .5rem;
+    background-color: white;
+    padding: 2rem;
+}
+
+.f-portfolio .f-card .f-card-flying-div span {
+    /* border: 1px solid black;
+    border-radius: 1rem; */
+    /* padding: .3rem .5rem; */
+    font-size: .9rem;
+    border-bottom: 1px solid black;
+    padding-bottom: .3rem;
+}
+
+.f-portfolio .f-card .f-card-flying-div span svg {
+    margin-right: .2rem;
+    /* line-height: 5rem; */
+}
+
+.f-portfolio .f-card .f-card-flying-div p {
+    margin-top: 3rem;
+}
+
+/**
+=====================================================================================
+
+Posts
+
+=====================================================================================
+*/
+
+.f-posts {
+    background-color: white !important;
+    border-bottom: 1px solid var(--color-12) !important;
+}
+
+.f-posts .card {
+    color: var(--color-7) !important;
+}
+
+.f-posts .card:hover {
+    color: var(--color-1) !important;
+}
+
+/**
+=====================================================================================
+
+Newletter
+
+=====================================================================================
+*/
+
+.f-newsletter {
+    background-color: #D19725 !important;
+    border-bottom: 1px solid var(--color-12) !important;
+}
+
+.f-newsletter .container {
+    border: 1rem dashed var(--color-7);
+}
+
+.f-newsletter .f-section-title {
+    font-size: 5rem;
+}
+
+.f-mailing-list-form {
+    width: 50%;
+}
+
+.f-mailing-list-form button {
+    background-color: var(--color-1) !important;
+    color: white !important;
+}
+
+.f-mailing-list-message {
+    padding-right: 6.5rem;
+    padding-bottom: .5rem;
+}
+
+/* .f-newsletter .f-points-right {
+    position: absolute;
+    right: 0;
+    bottom: 1px;
+} */
+
+/* .f-newsletter .card {
+    color: var(--color-7) !important;
+    position: relative;
+}
+
+.f-newsletter .card .card-title-container {
+    position: absolute;
+    background-color: white;
+    border-radius: .5rem;
+    width: 80%;
+    left: 1rem;
+    bottom: 1rem;
+    margin:0;
+    padding: 0 .5rem .5rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-7);
+    border-radius: .5rem;
+}
+
+.f-newsletter .card .card-title {
+    font-size: 1rem;
+    margin:0;
+    padding:0;
+}
+
+.f-newsletter .card:hover {
+    color: var(--color-1) !important;
+}
+
+.f-newsletter .f-card {
+    background-color: #fbfafa;
+    height: 60vh;
+    border-radius: .5rem;
+    position: relative;
+}
+
+.f-newsletter .f-card .f-card-image {
+    height: 60%;
+}
+
+.f-newsletter .f-card .f-card-bottom {
+    position: absolute;
+    bottom: 0;
+    margin-left: 1rem;
+    color: #d9d9d9;
+}
+
+.f-newsletter .f-card .f-card-bottom p {
+    border-color: #d9d9d9;
+}
+
+.f-newsletter .f-card .f-card-flying-div {
+    position: absolute;
+    height: 40%;
+    width: 90%;
+    left: 5%;
+    top: 50%;
+    border-radius: .5rem;
+    background-color: white;
+    padding: 2rem;
+}
+
+.f-newsletter .f-card .f-card-flying-div span {
+    font-size: .9rem;
+    border-bottom: 1px solid black;
+    padding-bottom: .3rem;
+}
+
+.f-newsletter .f-card .f-card-flying-div span svg {
+    margin-right: .2rem;
+}
+
+.f-newsletter .f-card .f-card-flying-div p {
+    margin-top: 3rem;
+} */
+
+/**
+=====================================================================================
+
+You might like section
+
+=====================================================================================
+*/
+
+.f-youMightLikeSection {
+    background-color: var(--color-9);
+}
+
+/**
+=====================================================================================
+
+You might like section
+
+=====================================================================================
+*/
+
+.f-breadcrumb {
+    background-color: var(--color-10) !important;
+}
+
+/**
+=====================================================================================
+
+About section
+
+=====================================================================================
+*/
+
+.f-about-section {
+    border-bottom: .2rem solid var(--color-9) !important;
+}
+
+.f-about-container {
+    width: 50vw;
+}
+
+/**
+=====================================================================================
+
+Footer
+
+=====================================================================================
+*/
+
+.f-footer {
+    height: 70vh;
+    background-color: rgba(var(--color-15), .5) !important;
+}
+
+.f-footer > .container {
+    height: 100%;
+}
+
+.f-footer .f-head {
+    height: 90%;
+    border-bottom: 1px solid var(--color-12) !important;
+}
+
+.f-footer .f-head .f-logos {
+}
+
+.f-footer .f-head .f-logos a {
+    text-decoration: none;
+}
+
+.f-footer .f-head .f-logos a svg {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.f-footer .f-username {
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.55) !important;
+    height: 100%;
+    line-height: 10px;
+    vertical-align:middle;
+    position: relative;
+}
+
+.f-footer .f-username .f-underline-draw {
+    position: absolute;
+    bottom: -2rem;
+    right: .5rem;
+    width: 7rem;
+}
+
+/* .f-footer .f-copyrights {
+    color: rgba(0, 0, 0, 0.55);
+    height: 100%;
+    background-color: blue;
+} */
+
+/* .f-head {
+    height: 90%;
+} */
+
+.f-copyrights {
+    height: 10%;
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.f-copyrights p {
+    margin: 0;
+}
+
+.f-copyrights .f-back-to-top {
+    color: rgba(0, 0, 0, 0.55);
+}
+
+
+/**
+=====================================================================================
+
+About - Hero
+
+=====================================================================================
+*/
+
+.f-about-hero {
+    background-color: rgba(247,245,245,.5) !important;
+    border-bottom: 1px solid var(--color-12) !important;
+    /* height: 85vh; */
+    height: 50vh;
+}
+
+.f-about-content .f-separator {
+    /* margin-top: 10rem;
+    margin-bottom: 10rem;
+    color: var(--color-7) !important; */
+
+    border-top: .3rem solid var(--color-1);
+    width: 10%;
+    opacity: 1;
+
+}
+
+/**
+=====================================================================================
+
+Portfolio Page
+
+=====================================================================================
+*/
+
+.f-portfolio-content .f-nav {
+    border: none;
+}
+
+.f-portfolio-content .f-nav .nav-link {
+    border: none;
+    padding-bottom: .1rem;
+    color: var(--color-7);
+}
+
+.f-portfolio-content .f-nav .nav-link:hover {
+    padding-bottom: 0;
+    color: var(--color-1);
+    border-bottom: .1rem solid var(--color-1);
+}
+
+.f-portfolio-content .f-nav .active {
+    padding-bottom: 0;
+    color: var(--color-1);
+    border-bottom: .1rem solid var(--color-1);
+}
+
+.f-portfolio-content .card {
+    color: var(--color-7) !important;
+    position: relative;
+}
+
+.f-portfolio-content .btn-load-more {
+    background-color: inherit; 
+    color: #0c0c0c; 
+    border-color: #0c0c0c;
+}
+
+.f-portfolio-content .btn-load-more:hover {
+    font-weight: bold;
+}
+
+.f-portfolio-content .card .card-title-container {
+    position: absolute;
+    background-color: white;
+    border-radius: .5rem;
+    width: 80%;
+    left: 1rem;
+    bottom: 1rem;
+    margin:0;
+    padding: 0 .5rem .5rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-7);
+    border-radius: .5rem;
+}
+
+.f-portfolio-content .card .card-title {
+    font-size: 1rem;
+    margin:0;
+    padding:0;
+}
+
+.f-portfolio-content .card:hover {
+    color: var(--color-1) !important;
+}
+
+/* #d9d9d9 */
+.f-portfolio-content .f-card {
+    background-color: #fbfafa;
+    height: 60vh;
+    border-radius: .5rem;
+    position: relative;
+}
+
+.f-portfolio-content .f-card .f-card-image {
+    height: 60%;
+}
+
+.f-portfolio-content .f-card .f-card-bottom {
+    position: absolute;
+    bottom: 0;
+    margin-left: 1rem;
+    color: #d9d9d9;
+}
+
+.f-portfolio-content .f-card .f-card-bottom p {
+    border-color: #d9d9d9;
+}
+
+.f-portfolio-content .f-card .f-card-flying-div {
+    position: absolute;
+    height: 40%;
+    width: 90%;
+    left: 5%;
+    top: 50%;
+    border-radius: .5rem;
+    background-color: white;
+    padding: 2rem;
+}
+
+.f-portfolio-content .f-card .f-card-flying-div span {
+    /* border: 1px solid black;
+    border-radius: 1rem; */
+    /* padding: .3rem .5rem; */
+    font-size: .9rem;
+    border-bottom: 1px solid black;
+    padding-bottom: .3rem;
+}
+
+.f-portfolio-content .f-card .f-card-flying-div span svg {
+    margin-right: .2rem;
+    /* line-height: 5rem; */
+}
+
+.f-portfolio-content .f-card .f-card-flying-div p {
+    margin-top: 3rem;
+}
+
+/**
+=====================================================================================
+
+Resume Page
+
+=====================================================================================
+*/
+
+/* #f-resume {
+    background-color: green;
+}
+
+#f-resume #f-personal-info {
+    background-color: red;
+}
+
+#f-resume #f-personal-info .col {
+    background-color: red;
+} */
+
+#f-resume .col-6 {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 4rem;
+    border-radius: .2rem;
+}
+
+#f-resume .col-6 > div:not(:nth-last-child(1)) {
+    margin-bottom: 3rem;
+}
+
+#f-resume .f-separator {
+    border-top: .3rem solid var(--color-1);
+    width: 10%;
+    opacity: 1;
+}
+
+#f-resume div.row {
+    margin-bottom: 2rem;
+}
+
+#f-resume .f-personal-info {
+    border: .1rem solid var(--color-12);
+    border-radius: .2rem;
+    padding: 1rem;
+}
+
+#f-resume .f-personal-info .f-name {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+#f-resume .f-personal-info .f-bio {
+}
+
+/* f-experience */
+
+#f-resume .f-experience .f-single {
+    border: .1rem solid var(--color-12);
+    border-radius: .2rem;
+    padding: 1rem 1rem 0 1rem;
+    margin-bottom: 1rem;
+}
+
+#f-resume .f-experience .f-single .f-title {
+    font-weight: bold;
+}
+
+#f-resume .f-experience .f-single .f-title {
+    font-weight: bold;
+}
+
+/* f-education */
+
+#f-resume .f-education .f-single {
+    border: .1rem solid var(--color-12);
+    border-radius: .2rem;
+    padding: 1rem 1rem 0 1rem;
+    margin-bottom: 1rem;
+}
+
+#f-resume .f-education .f-single .f-school {
+    font-weight: bold;
+}
+
+#f-resume .f-education .f-gpa::before {
+    content: "\00B7";
+	margin: 0 4px;
+}
+
+/**
+=====================================================================================
+
+Contact Page
+
+=====================================================================================
+*/
+
+.f-contact form {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 1rem;
+    border-radius: .2rem;
+}
+
+.f-contact form h2 {
+    border-bottom: .2rem solid var(--color-1);
+    padding-bottom: 3rem;
+}
+
+.f-contact form .btn-send {
+    background-color: var(--color-1);
+    border: none;
+    height: 3rem;
+    width: 100%;
+    font-weight: bold;
+}
+
+.f-contact .f-logos a {
+    text-decoration: none;
+}
+
+.f-contact .f-logos a svg {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.f-contact .f-username {
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.55) !important;
+    height: 100%;
+    line-height: 10px;
+    
+  vertical-align:middle; 
+}
+
+
+/**
+=====================================================================================
+
+Blog Page
+
+=====================================================================================
+*/
+
+.f-blog form {
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 2rem 2rem 1rem 2rem;
+    border-radius: .2rem;
+}
+
+.f-blog form .btn-send {
+    background-color: var(--color-1);
+    border: none;
+    height: 3rem;
+    width: 100%;
+    font-weight: bold;
+}
+
+/**
+=====================================================================================
+
+Portfolio Page
+
+=====================================================================================
+*/
+
+.f-blog .f-nav {
+    border: none;
+}
+
+.f-blog .f-nav .nav-link {
+    border: none;
+    padding-bottom: .1rem;
+    color: var(--color-7);
+}
+
+.f-blog .f-nav .nav-link:hover {
+    padding-bottom: 0;
+    color: var(--color-1);
+    border-bottom: .1rem solid var(--color-1);
+}
+
+.f-blog .f-nav .active {
+    padding-bottom: 0;
+    color: var(--color-1);
+    border-bottom: .1rem solid var(--color-1);
+}
+
+.f-blog .card {
+    color: var(--color-7) !important;
+    position: relative;
+}
+
+.f-blog .btn-load-more {
+    background-color: inherit; 
+    color: #0c0c0c; 
+    border-color: #0c0c0c;
+}
+
+.f-blog .btn-load-more:hover {
+    font-weight: bold;
+}
+
+.f-blog .card .card-title-container {
+    position: absolute;
+    background-color: white;
+    border-radius: .5rem;
+    width: 80%;
+    left: 1rem;
+    bottom: 1rem;
+    margin:0;
+    padding: 0 .5rem .5rem .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-7);
+    border-radius: .5rem;
+}
+
+.f-blog .card .card-title {
+    font-size: 1rem;
+    margin:0;
+    padding:0;
+}
+
+.f-blog .card:hover {
+    color: var(--color-1) !important;
+}
+
+/* #d9d9d9 */
+.f-blog .f-card {
+    background-color: #fbfafa;
+    height: 60vh;
+    border-radius: .5rem;
+    position: relative;
+}
+
+.f-blog .f-card .f-card-image {
+    height: 60%;
+}
+
+.f-blog .f-card .f-card-bottom {
+    position: absolute;
+    bottom: 0;
+    margin-left: 1rem;
+    color: #d9d9d9;
+}
+
+.f-blog .f-card .f-card-bottom p {
+    border-color: #d9d9d9;
+}
+
+.f-blog .f-card .f-card-flying-div {
+    position: absolute;
+    height: 40%;
+    width: 90%;
+    left: 5%;
+    top: 50%;
+    border-radius: .5rem;
+    background-color: white;
+    padding: 2rem;
+}
+
+.f-blog .f-card .f-card-flying-div span {
+    /* border: 1px solid black;
+    border-radius: 1rem; */
+    /* padding: .3rem .5rem; */
+    font-size: .9rem;
+    border-bottom: 1px solid black;
+    padding-bottom: .3rem;
+}
+
+.f-blog .f-card .f-card-flying-div span svg {
+    margin-right: .2rem;
+    /* line-height: 5rem; */
+}
+
+.f-blog .f-card .f-card-flying-div p {
+    margin-top: 3rem;
 }
